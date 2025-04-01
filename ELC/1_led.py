@@ -9,7 +9,7 @@ LED2=15
 
 GPIO.setup(LED1,GPIO.OUT)
 GPIO.setup(LED2,GPIO.OUT)
-time.speep(1)
+time.sleep(1)
 
 GPIO.OUT(LED1,True)
 GPIO.OUT(LED2,False)

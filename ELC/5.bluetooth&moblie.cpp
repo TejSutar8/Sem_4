@@ -1,4 +1,4 @@
--#define GREEN 4
+#define GREEN 4
 #define RED 3
 #define BUZ 2
 

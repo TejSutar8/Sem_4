@@ -1,7 +1,7 @@
-import PRi.GPIO as GPIO
+import RPi.GPIO as GPIO  # Fixed typo in PRi.GPIO
 import time
 GPIO.setmode(GPIO.BCM)
-GPIO.setwargnings(False)
+GPIO.setwarnings(False)  # Fixed typo in setwargnings
 
 PIR_input = 21
 BUZZ = 20
