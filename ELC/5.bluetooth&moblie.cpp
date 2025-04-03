@@ -25,11 +25,11 @@ void loop()
 
     digitalWrite(GREEN,LOW);
     digitalWrite(RED,LOW);
-    digitalWrite.(BUZ,LOW);
+    digitalWrite(BUZ,LOW);
 
     if(switchstate == 'g')
     {
-      digital(GREEN,HIGH);
+      digitalwrite(GREEN,HIGH);
     }
     else if (switchstate == 'r')
     {
