@@ -81,6 +81,22 @@ int search(Node *root, int key)
     return 0;
 }
 
+int sumOdd(Node *root)
+{
+    if (root == NULL)
+        return 0;
+    int sum = (root->data % 2 != 0) ? root->data : 0;
+    return sum + sumOdd(root->left) + sumOdd(root->right);
+}
+
+int sumEven(Node *root)
+{
+    if (root == NULL)
+        return 0;
+    int sum = (root->data % 2 == 0) ? root->data : 0;
+    return sum + sumEven(root->left) + sumEven(root->right);
+}
+
 int main()
 {
     Node *root = NULL;
@@ -94,7 +110,9 @@ int main()
         printf("\n3. Preorder Traversal");
         printf("\n4. Inorder Traversal");
         printf("\n5. Search");
-        printf("\n6. Exit");
+        printf("\n6. Sum of Odd Numbers");
+        printf("\n7. Sum of Even Numbers");
+        printf("\n8. Exit");
         printf("\nEnter your choice: ");
         scanf("%d", &choice);
 
@@ -131,6 +149,14 @@ int main()
             break;
 
         case 6:
+            printf("\nSum of odd numbers in BST: %d\n", sumOdd(root));
+            break;
+
+        case 7:
+            printf("\nSum of even numbers in BST: %d\n", sumEven(root));
+            break;
+
+        case 8:
             printf("Exiting program...\n");
             return 0;
 
