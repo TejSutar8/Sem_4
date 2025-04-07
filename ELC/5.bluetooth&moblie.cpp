@@ -14,11 +14,11 @@ void setup()
 
 void loop()
 {
-  if (serial.aviable() > 0) 
+  if (serial.available() > 0) 
   {
     delay(50);
     switchstate = serial.read();
-    while (serial.aviable() > 0)
+    while (serial.available() > 0)
     {
       serial.read();
     }
